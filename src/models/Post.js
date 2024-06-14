@@ -1,7 +1,7 @@
 import mongoose from "mongoose";
 
 const postSchema = new mongoose.Schema({
-  user_id: {
+  userId: {
     type: mongoose.Schema.Types.ObjectId,
     ref: 'User',
     required: true
@@ -19,6 +19,5 @@ const postSchema = new mongoose.Schema({
     required: true
   }
 });
-
 const Post = mongoose.model('Post', postSchema);
 export default Post;
